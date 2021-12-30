@@ -1,0 +1,56 @@
+WindowManager:
+    MainWindow:
+    ExtraWindow:
+
+<MainWindow>:
+    name:"main"
+
+
+    FloatLayout:
+        cols:1
+        rows:2
+        size: root.width, root.height
+
+
+        #Label:
+        #    id: time
+        #    text: "00:00:00"
+
+
+
+
+        Button:
+            pos_hint: {"x":0.0,"y":0.0}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 14**4
+            text: "Extra Window"
+            on_press: root.time()
+            on_release: app.root.current = "extra"
+
+        TextInput:
+            pos_hint: {"x":0.5, "y":0.0}
+            size_hint: 0.4, 0.12
+            id:something
+            multiline: False
+            font_size: (root.width**2 + root.height**2) / 14**4
+
+
+
+<ExtraWindow>:
+    name:"extra"
+
+    FloatLayout:
+        cols:1
+        size: root.width, root.height/2
+
+        Label:
+            text: "Extra"
+            pos_hint: {"x":0.0,"y":0.0}
+
+        Button:
+            pos_hint: {"x":0.5,"y":0.5}
+            size_hint: 0.4, 0.1
+            font_size: (root.width**2 + root.height**2) / 14**4
+            text: "Main"
+            on_release: app.root.current = "main"
+

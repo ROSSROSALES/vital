@@ -1,0 +1,156 @@
+GridLayout:
+    cols:3
+    rows:3
+    spacing: 10
+
+    GridLayout:
+        cols:2
+        rows:2
+        Button:
+            id: start_stop
+            #pos_hint: {'x':0.1,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "Start"
+            on_press: app.start_stop()
+
+        Button
+            id: reset
+            #pos_hint: {'x':0.60,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "Reset"
+            on_press: app.reset()
+
+    GridLayout:
+        rows:2
+        Label:
+            id: time
+            #pos_hint: {'x':0.0,"top":1.0}
+            text:'[b]00[/b]:00:00'
+            font_size:60
+            markup: True
+
+        Label:
+            id: stopwatch
+            #pos_hint: {"top":1.25}
+            text:'[b]00[/b]:00:00'
+            font_size:60
+            markup: True
+
+    GridLayout:
+        rows:5
+        Label:
+            id: hr_monitor
+            #pos_hint: {"top":1.25}
+            text:'HR'
+            font_size:60
+            markup: True
+        Label:
+            id: bp_monitor
+            #pos_hint: {"top":1.25}
+            text:'BP'
+            font_size:60
+            markup: True
+
+        Label:
+            id: o2_monitor
+            #pos_hint: {"top":1.25}
+            text: 'O[sub]2[/sub]'
+            font_size:60
+            markup: True
+        Label:
+            id: rr_monitor
+            #pos_hint: {"top":1.25}
+            text:'RR'
+            font_size:60
+            markup: True
+        Label:
+            id: temp_monitor
+            #pos_hint: {"top":1.25}
+            text:'Temp'
+            font_size:60
+            markup: True
+
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: progress
+            #size_hint: 0.3,0.2
+            text:""
+
+        Button:
+            id: progress_entry
+            #size_hint: 0.3,0.2
+            text: "submit"
+            on_press: app.progress_entry()
+
+    GridLayout:
+        rows:5
+        cols:2
+        TextInput:
+            id: hr
+            #size_hint: 0.3,0.2
+            text:"HR: "
+
+        Button:
+            id: hr_entry
+            #size_hint: 0.3,0.2
+            text: "HR"
+            on_press: app.hr_entry()
+
+
+        TextInput:
+            id: bp
+            #size_hint: 0.3,0.2
+            text:"BP: "
+
+        Button:
+            id: bp_entry
+            #size_hint: 0.3,0.2
+            text: "BP"
+            on_press: app.bp_entry()
+
+
+        TextInput:
+            id: o2
+            #size_hint: 0.3,0.2
+            text:"O2:  "
+
+        Button:
+            id: o2_entry
+            #size_hint: 0.3,0.2
+            text: 'O2'
+            on_press: app.o2_entry()
+
+
+        TextInput:
+            id: rr
+            #size_hint: 0.3,0.2
+            text:"RR: "
+
+        Button:
+            id: rr_entry
+            #size_hint: 0.3,0.2
+            text: "RR"
+            on_press: app.rr_entry()
+
+
+        TextInput:
+            id: temp
+            #size_hint: 0.3,0.2
+            text:"Temp: "
+
+        Button:
+            id: bp_entry
+            #size_hint: 0.3,0.2
+            text: "Temp"
+            on_press: app.temp_entry()
+
+
+
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            id: vital_entry
+            #size_hint: 0.3,0.2
+            text: "Vital"
+            on_press: app.vital_entry()
