@@ -1,0 +1,58 @@
+GridLayout:
+    cols:1
+    rows:3
+    spacing: 10
+
+    GridLayout:
+        rows:3
+        Label:
+            id: time
+            #pos_hint: {'x':0.0,"top":1.0}
+            text:'[b]00[/b]:00:00'
+            font_size:60
+            markup: True
+
+        Label:
+            id: stopwatch
+            #pos_hint: {"top":1.25}
+            text:'[b]00[/b]:00:00'
+            font_size:60
+            markup: True
+
+        Label:
+            id: epi_time
+            #pos_hint: {"top":1.25}
+            text:'[b]00[/b]:00:00'
+            font_size:60
+            markup: True
+
+    GridLayout:
+        cols:2
+        rows:2
+        Button:
+            id: start_stop
+            #pos_hint: {'x':0.1,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "Start"
+            on_press: app.start_stop()
+
+        Button
+            id: reset
+            #pos_hint: {'x':0.60,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "Reset"
+            on_press: app.reset()
+
+        Button:
+            id: start_stop1
+            #pos_hint: {'x':0.1,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "epi"
+            on_press: app.start_stop1()
+
+        Button
+            id: reset1
+            #pos_hint: {'x':0.60,"top":0.55}
+            size_hint: 0.3, 0.2
+            text: "Reset"
+            on_press: app.reset1()
