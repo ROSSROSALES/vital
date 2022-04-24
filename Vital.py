@@ -2,7 +2,7 @@ from kivy.app import App
 from time import strftime
 from kivy.clock import Clock
 
-class StopWatchApp(App):
+class VitalApp(App):
     sw_seconds=0
     sw_started = False
 
@@ -90,4 +90,4 @@ class StopWatchApp(App):
 
 
 if __name__=="__main__":
-    StopWatchApp().run()
+    Vital().run()
