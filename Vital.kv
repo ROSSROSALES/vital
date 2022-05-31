@@ -1,6 +1,6 @@
 GridLayout:
     cols:3
-    rows:3
+    rows:2
     spacing: 10
 
     GridLayout:
@@ -154,3 +154,19 @@ GridLayout:
             #size_hint: 0.3,0.2
             text: "Vital"
             on_press: app.vital_entry()
+
+        Button:
+            id: recall
+            #size_hint: 0.3,0.2
+            text: "recall"
+            on_press: app.recall()
+
+        Button:
+            id: delete
+            text: "delete \n last \n entry"
+            on_press: app.delete()
+
+        Button:
+            id: last
+            text: "last entry"
+            on_press: app.last()
