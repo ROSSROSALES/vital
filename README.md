@@ -3,4 +3,4 @@
  Vitals signs and Progress notes are documented based on time of computer  
  Recorded notes with accurate times  
 
-![Vital_Sign_Notes_Screenshot](https://user-images.githubusercontent.com/52366381/147770611-ce8b0fde-759f-4574-8289-39168795f216.JPG)
+![Vital Read Me Demo](https://user-images.githubusercontent.com/52366381/171141689-28e104bd-83e0-41cd-9be4-cb625c006299.JPG)
