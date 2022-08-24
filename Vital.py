@@ -171,18 +171,20 @@ class VitalApp(App):
 
         connection.commit()
         connection.close()
-'''
+
     def last(self):
         # button is pressed the last
         connection = sqlite3.connect('data.db')
         cursor = connection.cursor()
-
+        cursor.execute('''SELECT Time,HR,BP FROM data''')
+        recall1= cursor.fetchall()
         id = cursor.lastrowid
-        print(id)
+
+        print(recall1[-1])
 
         connection.commit()
         connection.close()
-'''
+
 
 if __name__=="__main__":
     VitalApp().run()
